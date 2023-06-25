@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js DOM</title>
+    </head>
+    <body>
+        <div class="gp gp1" id="Dadajii">
+            <h4>Dada Jii</h4>
+            <div class="p">
+                <h5>Papa Jii</h5>
+                <div class="c">
+                    <h6>Beta Jii</h6>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // L-69 Assignment
+            // Lets Create a i tag
+            i = document.createElement('i');
+            i.setAttribute('class','fas fa-home fa-xl');
+            // or
+            // i.classList.add('fa-home');
+            console.log(i);
+            document.body.append(i);
+
+            // Lets create a CSS CDN Link Tag
+            let l = document.createElement('link');
+            l.setAttribute('rel','stylesheet');
+            l.setAttribute('href','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+            console.log(l);
+            document.head.append(l);
+
+            // Hoisting Rule
+            var i;
+            //
+
+            // L-70 Assignment
+            // traversing Up
+            var g = document.querySelector('div.c');
+            console.log(g);
+            g.closest('div.gp').style.border = '2px solid red';
+            g.closest('div.p').style.border = '2px solid blue';
+            // g.closest('div.p').style.color= 'red';
+
+            // Traversing Down
+            var d = document.querySelector('div.gp1');
+            console.log(d);
+
+            arr = d.querySelectorAll('div.c');
+            console.log(arr);
+
+            arr.forEach(function(currentElement,index,arr){
+                currentElement.style.color = 'Orange';
+                console.log(customElements);
+            });
+        </script>
+    </body>
+</html>
